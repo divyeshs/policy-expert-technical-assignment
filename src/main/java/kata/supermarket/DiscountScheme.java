@@ -5,5 +5,5 @@ import java.util.List;
 
 public interface DiscountScheme {
     BigDecimal calculateDiscount(BigDecimal price);
-    boolean isApplicableTo(List<Item> items);
+    boolean isApplicableTo(List<Item> basketItems);
 }

@@ -8,7 +8,7 @@ public class NoDiscountScheme implements DiscountScheme {
         return BigDecimal.ZERO;
     }
 
-    public boolean isApplicableTo(List<Item> items) {
+    public boolean isApplicableTo(List<Item> basketItems) {
         return true;
     }
 }

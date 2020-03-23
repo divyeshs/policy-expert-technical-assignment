@@ -9,8 +9,8 @@ public class BuyOneGetOneFreeDiscountScheme implements DiscountScheme {
         return price.divide(new BigDecimal(2));
     }
 
-    public boolean isApplicableTo(List<Item> items) {
-        if (items.stream().map(Item::discountScheme)
+    public boolean isApplicableTo(List<Item> basketItems) {
+        if (basketItems.stream().map(Item::discountScheme)
                 .filter(discountScheme -> discountScheme instanceof BuyOneGetOneFreeDiscountScheme)
                 .count() % 2 == 0)
             return true;
